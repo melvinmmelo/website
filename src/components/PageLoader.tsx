@@ -7,22 +7,17 @@ interface PageLoaderProps {
 }
 
 export default function PageLoader({ onLoadingComplete }: PageLoaderProps) {
-  const [progress, setProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) => {
-        if (prevProgress >= 100) {
-          clearInterval(timer);
-          setTimeout(() => {
-            setIsVisible(false);
-            onLoadingComplete();
-          }, 500);
-          return 100;
-        }
-        return prevProgress + Math.random() * 15;
-      });
+      if (isVisible) {
+        clearInterval(timer);
+        setTimeout(() => {
+          setIsVisible(false);
+          onLoadingComplete();
+        }, 1000);
+      }
     }, 150);
 
     return () => clearInterval(timer);
@@ -45,32 +40,6 @@ export default function PageLoader({ onLoadingComplete }: PageLoaderProps) {
             </div>
           </div>
         </div>
-
-        {/* Loading Text */}
-        <div className="mb-8">
-          {/* <h2 className="text-2xl font-bold text-white mb-2">Loading Portfolio</h2>
-          <p className="text-gray-400">Please wait while we prepare everything...</p> */}
-        </div>
-
-        {/* Progress Bar */}
-        {/* <div className="w-80 mx-auto">
-          <div className="bg-gray-700 rounded-full h-2 overflow-hidden">
-            <div 
-              className="bg-gradient-to-r from-gray-400 to-gray-600 h-full rounded-full transition-all duration-300 ease-out"
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
-          <div className="mt-2 text-gray-400 text-sm">
-            {Math.round(progress)}%
-          </div>
-        </div> */}
-
-        {/* Loading Dots Animation */}
-        {/* <div className="flex justify-center space-x-2 mt-8">
-          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
-        </div> */}
       </div>
     </div>
   );
