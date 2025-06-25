@@ -74,7 +74,7 @@ export default function AnimatedBackground() {
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(217, 119, 6, 0.6)'; // amber-600 with opacity
+        ctx.fillStyle = 'rgba(156, 163, 175, 0.6)'; // gray-400 with opacity
         ctx.fill();
         
         // Draw connections
@@ -88,7 +88,7 @@ export default function AnimatedBackground() {
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             const opacity = (120 - distance) / 120 * 0.3;
-            ctx.strokeStyle = `rgba(217, 119, 6, ${opacity})`;
+            ctx.strokeStyle = `rgba(156, 163, 175, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
