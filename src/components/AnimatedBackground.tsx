@@ -18,7 +18,7 @@ interface MousePosition {
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(0);
   const mouseRef = useRef<MousePosition>({ x: 0, y: 0 });
   const [isMounted, setIsMounted] = useState(false);
 
