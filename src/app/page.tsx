@@ -9,17 +9,24 @@ export default function Home() {
       <AnimatedBackground />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-gray-400 to-gray-600 p-1 shadow-lg">
-                <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
+              <a 
+                href="#about"
+                className="inline-block w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-gray-400 to-gray-600 p-1 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer relative animate-pulse"
+              >
+                {/* Animated rotating border */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 animate-spin opacity-75" style={{ animationDuration: '3s' }}></div>
+                <div className="absolute inset-1 rounded-full bg-gradient-to-r from-gray-400 to-gray-600"></div>
+                
+                <div className="relative w-full h-full rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors duration-300 z-10">
                   <span className="text-4xl font-bold text-white">MM</span>
                 </div>
-              </div>
+              </a>
             </div>
-       
+            
           </div>
         </div>
       </section>
