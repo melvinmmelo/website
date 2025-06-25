@@ -1,6 +1,5 @@
 'use client';
 
-import { Github, Mail, ExternalLink } from "lucide-react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import PageLoader from "@/components/PageLoader";
 import { useState, useEffect } from "react";
