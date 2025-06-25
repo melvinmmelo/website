@@ -58,7 +58,7 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">Hi! I'm Melvin,</h2>
+            <h2 className="text-4xl font-bold text-white text-center mb-16">Hi! I&apos;m Melvin,</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <TypingAnimation
