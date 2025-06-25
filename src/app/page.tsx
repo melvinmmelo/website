@@ -3,14 +3,28 @@
 import { Github, Mail, ExternalLink } from "lucide-react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import PageLoader from "@/components/PageLoader";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const [isNavigating, setIsNavigating] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    // Check if we're coming back from about page or if it's a direct navigation
+    const fromAbout = searchParams.get('from') === 'about' || sessionStorage.getItem('skipLoader') === 'true';
+    
+    if (fromAbout) {
+      // Skip loader and show content immediately
+      setIsLoading(false);
+      setShowContent(true);
+      // Clean up the session storage
+      sessionStorage.removeItem('skipLoader');
+    }
+  }, [searchParams]);
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
@@ -21,10 +35,11 @@ export default function Home() {
 
   const goToAbout = () => {
     setIsNavigating(true);
-    
+    // Set session storage to skip loader on return
+    sessionStorage.setItem('skipLoader', 'true');
     // Add smooth fade out transition
     setTimeout(() => {
-      router.push('/about');
+      router.push('/about?from=home');
     }, 300);
   };
 

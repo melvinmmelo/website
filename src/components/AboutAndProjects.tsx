@@ -24,9 +24,12 @@ export default function Home() {
   const goToHome = () => {
     setIsNavigating(true);
     
+    // Set flag to skip loader on home page
+    sessionStorage.setItem('skipLoader', 'true');
+    
     // Add smooth fade out transition
     setTimeout(() => {
-      router.push('/');
+      router.push('/?from=about');
     }, 300);
   };
 
@@ -70,7 +73,7 @@ export default function Home() {
             }`}>
               <div>
                 <TypingAnimation
-                  text="I&apos;m a full-stack developer from Batangas, Philippines, who thrives at the intersection of proven development practices and emerging technologies. Over the past 10 years, I&apos;ve evolved from traditional web development to incorporating AI and other innovative tools into my solutions, always with one goal: exceeding client expectations. My passion for continuous learning drives me to explore new technologies daily, while my commitment to client collaboration ensures these innovations translate into real-world value. From concept to deployment, I create applications that are not just functional and beautiful, but truly intelligent."
+                  text="I&apos;m a full-stack developer from Batangas, Philippines, who thrives at the intersection of proven development practices and emerging technologies. Over the past 10 years, I&apos;ve evolved from traditional web development to incorporating AI and other innovative tools into my solutions, always with one goal: exceeding client expectations. My passion for continuous learning drives me to explore new technologies daily, while my commitment to client collaboration ensures these innovations translate into real-world value. From concept to deployment, I create applications that are not just functional and beautiful, but truly intelligent. Scroll down to see my projects!"
                   className="text-gray-300 text-lg leading-relaxed mb-6"
                 />
               </div>
@@ -183,7 +186,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto text-center">
             <h2 className={`text-4xl font-bold text-white mb-8 transition-all duration-500 delay-900 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-            }`}>Let&apos;s Work Together</h2>
+            }`}>Let&apos;s Work Together!</h2>
             <p className={`text-xl text-gray-300 mb-12 max-w-2xl mx-auto transition-all duration-500 delay-1000 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
             }`}>
