@@ -35,13 +35,13 @@ export default function PageLoader({ onLoadingComplete }: PageLoaderProps) {
       <div className="text-center">
         {/* Animated Logo */}
         <div className="mb-8">
-          <div className="inline-block w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-gray-400 to-gray-600 p-1 shadow-lg relative animate-pulse">
+          <div className="inline-block w-18 h-18 mx-auto rounded-full bg-gradient-to-r from-gray-400 to-gray-600 p-1 shadow-lg relative animate-pulse">
             {/* Animated rotating border */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 animate-spin opacity-75" style={{ animationDuration: '2s' }}></div>
             <div className="absolute inset-1 rounded-full bg-gradient-to-r from-gray-400 to-gray-600"></div>
             
             <div className="relative w-full h-full rounded-full bg-gray-800 flex items-center justify-center z-10">
-              <span className="text-2xl font-bold text-white">MM</span>
+              {/* <span className="text-2xl font-bold text-white">MM</span> */}
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function PageLoader({ onLoadingComplete }: PageLoaderProps) {
         </div>
 
         {/* Progress Bar */}
-        <div className="w-80 mx-auto">
+        {/* <div className="w-80 mx-auto">
           <div className="bg-gray-700 rounded-full h-2 overflow-hidden">
             <div 
               className="bg-gradient-to-r from-gray-400 to-gray-600 h-full rounded-full transition-all duration-300 ease-out"
@@ -63,7 +63,7 @@ export default function PageLoader({ onLoadingComplete }: PageLoaderProps) {
           <div className="mt-2 text-gray-400 text-sm">
             {Math.round(progress)}%
           </div>
-        </div>
+        </div> */}
 
         {/* Loading Dots Animation */}
         {/* <div className="flex justify-center space-x-2 mt-8">

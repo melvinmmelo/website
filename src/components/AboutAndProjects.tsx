@@ -115,7 +115,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">EOLF Food Trading OPC</h3>
                   <a 
-                    href="https://eolffoodtradingopc.logiainnov.com" 
+                    href="#" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors"
@@ -124,7 +124,7 @@ export default function Home() {
                   </a>
                 </div>
                 <p className="text-gray-300 mb-4">
-                  EOLF Food Trading OPC is a Laravel application with social media authentication integration for seamless user login experience.
+                  Full-stack application combining Laravel backend with Vue.js frontend for modern authentication system.
                 </p>
                 <div className="flex items-center gap-2">
                 <span className="bg-yellow-900/50 text-white-300 px-2 py-1 rounded text-sm">PHP</span>
@@ -137,7 +137,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">Philippine Pediatric Society - STC</h3>
                   <a 
-                    href="https://ppsstc.org" 
+                    href="#" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors"
@@ -159,7 +159,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">AralOnline New York</h3>
                   <a 
-                    href="https://aralonyc.com" 
+                    href="#" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors"

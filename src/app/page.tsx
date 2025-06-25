@@ -65,11 +65,11 @@ function HomeContent() {
                   }`}
                 >
                   {/* Animated rotating border */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 animate-spin opacity-75" style={{ animationDuration: '3s' }}></div>
-                  <div className="absolute inset-1 rounded-full bg-gradient-to-r from-gray-400 to-gray-600"></div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white-300 via-white-500 to-white-300 animate-spin opacity-75" style={{ animationDuration: '3s' }}></div>
+                  <div className="absolute inset-1 rounded-full bg-gradient-to-r from-white-400 to-white-600"></div>
                   
-                  <div className="relative w-full h-full rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors duration-300 z-10">
-                    <span className="text-4xl font-bold text-white">MM</span>
+                  <div className="relative w-full h-full rounded-full bg-gray-900 flex items-center justify-center hover:bg-gray-700 transition-colors duration-300 z-10">
+                    <span className="text-4xl font-bold text-white">M</span>
                   </div>
                   
 
@@ -77,7 +77,7 @@ function HomeContent() {
                     <span className={`text-white text-sm block z-20 transition-all duration-300 ${
                       isNavigating ? 'opacity-100 animate-pulse' : 'opacity-0 animate-fadeIn'
                     }`} style={{ animationDelay: isNavigating ? '0s' : '8s', animationFillMode: 'forwards' }}>
-                      {isNavigating ? 'Loading...' : 'Click to know more about me.'}
+                      {isNavigating ? 'Loading...' : 'START'}
                     </span>
                   </div>
                 </button>
