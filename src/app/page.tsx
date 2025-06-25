@@ -1,11 +1,10 @@
 'use client';
 
-import Image from "next/image";
-import { Github, Mail, ExternalLink, Code, Coffee, Heart } from "lucide-react";
+import { Github, Mail, ExternalLink } from "lucide-react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import PageLoader from "@/components/PageLoader";
 import TypingAnimation from "@/components/TypingAnimation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -63,23 +62,9 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <TypingAnimation
-                  text="I'm a full-stack developer from Batangas, Philippines, who thrives at the intersection of proven development practices and emerging technologies. Over the past 10 years, I've evolved from traditional web development to incorporating AI and other innovative tools into my solutions, always with one goal: exceeding client expectations. My passion for continuous learning drives me to explore new technologies daily, while my commitment to client collaboration ensures these innovations translate into real-world value. From concept to deployment, I create applications that are not just functional and beautiful, but truly intelligent."
+                  text="I&apos;m a full-stack developer from Batangas, Philippines, who thrives at the intersection of proven development practices and emerging technologies. Over the past 10 years, I&apos;ve evolved from traditional web development to incorporating AI and other innovative tools into my solutions, always with one goal: exceeding client expectations. My passion for continuous learning drives me to explore new technologies daily, while my commitment to client collaboration ensures these innovations translate into real-world value. From concept to deployment, I create applications that are not just functional and beautiful, but truly intelligent."
                   className="text-gray-300 text-lg leading-relaxed mb-6"
                 />
-                {/* <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Code size={20} className="text-gray-400" />
-                    <span>Ask me about Web Development</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Coffee size={20} className="text-gray-400" />
-                    <span>I love anime, sports and coffee</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Heart size={20} className="text-gray-400" />
-                    <span>Badminton Coach</span>
-                  </div>
-                </div> */}
               </div>
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-gray-700/70 backdrop-blur-sm rounded-xl p-6 border border-gray-600 shadow-sm">
@@ -180,10 +165,10 @@ export default function Home() {
         {/* Contact Section */}
         <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-8">Let's Work Together</h2>
+            <h2 className="text-4xl font-bold text-white mb-8">Let&apos;s Work Together</h2>
             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities and interesting projects. 
-              Feel free to reach out if you'd like to collaborate!
+              I&apos;m always open to discussing new opportunities and interesting projects. 
+              Don&apos;t hesitate to reach out if you&apos;d like to collaborate!
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a 
