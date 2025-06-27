@@ -3,6 +3,7 @@
 import AnimatedBackground from "@/components/AnimatedBackground";
 import PageLoader from "@/components/PageLoader";
 import { useState, useEffect, Suspense } from "react";
+import { Play } from 'lucide-react';
 import { useRouter, useSearchParams } from "next/navigation";
 
 function HomeContent() {
@@ -68,8 +69,20 @@ function HomeContent() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white-300 via-white-500 to-white-300 animate-spin opacity-75" style={{ animationDuration: '3s' }}></div>
                   <div className="absolute inset-1 rounded-full bg-gradient-to-r from-white-400 to-white-600"></div>
                   
-                  <div className="relative w-full h-full rounded-full bg-gray-900 flex items-center justify-center hover:bg-gray-700 transition-colors duration-300 z-10">
-                    <span className="text-4xl font-bold text-white">M</span>
+                  <div className="relative w-full h-full rounded-full bg-gradient-to-br from-gray-800 to-gray-950 flex items-center justify-center group transform transition-all duration-300 z-10 overflow-hidden
+                    before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-t before:from-transparent before:to-gray-700/30 before:opacity-0 before:transition-opacity before:duration-300
+                    after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-b after:from-gray-900/80 after:to-transparent after:opacity-100 after:transition-opacity after:duration-300
+                    hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:before:opacity-100 hover:after:opacity-0">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-700/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
+                      <div className="absolute inset-0 blur-sm bg-white/20 rounded-full scale-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <Play
+                        className="w-12 h-12 text-white transform transition-transform duration-300
+                          [filter:drop-shadow(0_0_8px_rgba(255,255,255,0.3))]
+                          group-hover:[filter:drop-shadow(0_0_12px_rgba(255,255,255,0.5))]"
+                        strokeWidth={2.5}
+                      />
+                    </div>
                   </div>
                   
 
